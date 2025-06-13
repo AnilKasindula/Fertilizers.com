@@ -169,7 +169,7 @@ def items_view(request):
     return render(request,'items.html',dealsdata)
 
 def detailspage_view(request,slug):
-    details = products_data.objects.get(details_page=slug)
+    details = products_data.objects.get(details_slug=slug)
     details_data = {
         'details_deals': details
     }
